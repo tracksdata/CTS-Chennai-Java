@@ -7,6 +7,7 @@ public class Employee {
 	private double salary;
 
 	public int getEmpId() {
+		System.out.println();
 		return empId;
 	}
 
@@ -30,5 +31,19 @@ public class Employee {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
+	
+	public void display() {
+		System.out.println("Emp Id: "+empId);
+		System.out.println("Name: "+empName);
+		System.out.println("Salary: "+salary);
+		System.out.println("-----------------------------");
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }
