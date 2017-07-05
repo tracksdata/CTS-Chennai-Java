@@ -22,10 +22,16 @@ class C1 {
 
 class C2 extends C1 {
 
-	@Override
-	void fun() {
-
-	}
+ @Override
+void fun() {
+	
+ // BL
+ }
+ 
+ public void test() {
+	 C1 c=new C2();
+	 c.fun();
+ }
 
 }
 
