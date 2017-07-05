@@ -1,31 +1,19 @@
 package com;
+class Test {
+	   public static void main(String[] args) {
+	     try {
+	       String s = "5.6";
+	       Integer.parseInt(s); // Cause a NumberFormatException
 
-public class Test {
-
-	void fun(int x) {
-		x=1000;
+	       int i = 0;
+	       int y = 2 / i;
+	     }
+	    
+	     catch (RuntimeException ex) {
+	       System.out.println("RuntimeException"); 
+	     }
+	     catch (Exception ex) {
+		       System.out.println("NumberFormatException");
+		     }
+	   }
 	}
-
-	void fun1(int[] x) {
-		x[0] = 3500;
-	}
-
-	public static void main(String[] args) {
-
-		Test t = new Test();
-
-		int i = 100;
-		System.out.println("In Main: " + i);
-		t.fun(i);
-		System.out.println("In Main after fun: " + i);
-
-		System.out.println("--------------------------------");
-
-		int x[] = { 200 };
-		System.out.println("In Main: " + x[0]);
-		t.fun1(x);
-		System.out.println("In Main:  Afer fun 1: " + x[0]);
-
-	}
-
-}
