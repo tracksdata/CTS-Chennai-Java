@@ -8,9 +8,9 @@ public class Sample {
 	public static void main(String[] args) {
 		
 		String s1="Abc";
-		Abc a=new Abc();
-		a.name="Praveen";
-		a.age=76;
+		//Abc a=new Abc();
+		//a.name="Praveen";
+		//a.age=76;
 		
 		
 		System.out.println("S1 hash code: "+s1.hashCode());
