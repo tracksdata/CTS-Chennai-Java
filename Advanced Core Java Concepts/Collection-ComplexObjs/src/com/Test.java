@@ -19,7 +19,7 @@ class SortByDob implements Comparator<Employee>{
 public class Test {
 
 	public static void main(String[] args) {
-		
+		System.out.println("--- Test");
 		
 		/*Address addr1=new Address();
 		Address addr2=new Address();
@@ -110,7 +110,8 @@ public class Test {
 		
 		Employee.display(emps); // SOrt by DOB
 		
-		
+		C1 c=new C1();
+		c.test();
 		
 		
 	}

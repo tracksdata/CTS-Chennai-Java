@@ -1,12 +1,52 @@
 package com;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Comparator;
 import java.util.List;
 
-public class Employee implements Comparable<Employee>,Comparator<Employee>{
+class C1 extends Employee{
+	private int cid;
+	
+	
+	public int getCid() {
+		return cid;
+	}
 
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+
+	void test() {
+		
+		
+		try {
+			
+			FileOutputStream fos=new FileOutputStream("d:/test.txt");
+			ObjectOutputStream oos=new ObjectOutputStream(fos);
+			C1 c=new C1();
+			c.setCid(122);
+			oos.writeObject(c);
+			System.out.println("-- done");
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}
+
+public class Employee implements  Comparable<Employee>,Comparator<Employee>{
+
+
+	private static final long serialVersionUID = 1L;
 	private int empId;
 	private String empName;
 	private double salary;
