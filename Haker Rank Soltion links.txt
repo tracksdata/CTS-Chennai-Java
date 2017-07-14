@@ -1,0 +1,3 @@
+http://pidanic.com/en/hackerrank/
+
+https://github.com/ubbn/hacker-rank-solutions
