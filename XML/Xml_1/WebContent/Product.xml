@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well Formed -->
+<!-- DTD -->
+<!DOCTYPE employee[
+<!ELEMENT product (productid,productname,price,payment)>
+<!ELEMENT productid (#PCDATA)>
+<!ELEMENT productname (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST payment method  (card|cash|cheque) "cash">
+]> <!-- End of DTD doc -->
+
+<product>
+	<productid>10</productid>
+	<productname>Pen</productname>
+	<price>76</price>
+	<payment>1500</payment>
+</product>
+
+
+
+
+
+

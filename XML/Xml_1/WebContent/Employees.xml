@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well Formed -->
+<!-- DTD -->
+<!DOCTYPE employee[
+<!ELEMENT employee (empid,empname,salary,project?)>
+<!ELEMENT empid (#PCDATA)>
+<!ELEMENT empname (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+]> <!-- End of DTD doc -->
+
+<employee>
+	<empid>10</empid>
+	<empname>Praveen</empname>
+	<salary>348734</salary>	
+	<project></project>	
+</employee>
+
+
+
+
