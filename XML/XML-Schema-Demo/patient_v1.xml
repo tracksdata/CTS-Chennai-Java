@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patient xmlns="http://www.praveen.com/patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.praveen.com/patient patientvalidations.xsd ">
+	
+	<id>7</id>
+	<name>PRAVEEN</name>
+	<age>10</age>
+	<gender>M</gender>
+	<dob>2001-01-01</dob>
+	<email>praveen@abc.com</email>
+	<phone>1234567664</phone>
+	
+</patient>

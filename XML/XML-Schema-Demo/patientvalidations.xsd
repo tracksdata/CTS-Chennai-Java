@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.praveen.com/patient"
+	xmlns:tns="http://www.praveen.com/patient" elementFormDefault="qualified">
+
+	<element name="patient" type="tns:Patient" />
+
+	<complexType name="Patient">
+
+		<sequence>
+			<element name="id" type="tns:ID" />
+			<element name="name" type="tns:name15charlength" />
+			<element name="age" type="tns:ageVal" />
+			<element name="gender" type="tns:genderVal" />
+			<element name="dob" type="date" />
+			<element name="email" type="string" />
+			<element name="phone" type="tns:phoneVal" />
+		</sequence>
+
+	</complexType>
+
+	<simpleType name="phoneVal">
+		<restriction base="string">
+			<maxLength value="10" />
+			<minLength value="10" />
+			<pattern value="[0-9]*"></pattern>
+		</restriction>
+
+	</simpleType>
+
+	<simpleType name="ageVal">
+		<restriction base="int">
+			<minInclusive value="1" />
+		</restriction>
+
+
+	</simpleType>
+
+	<simpleType name="ID">
+		<restriction base="int">
+			<pattern value="[0-8]*"></pattern>
+		</restriction>
+	</simpleType>
+
+
+	<simpleType name="name15charlength">
+		<restriction base="string">
+			<maxLength value="15" />
+			<pattern value="[A-Z]*"></pattern>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="genderVal">
+		<restriction base="string">
+			<enumeration value="M" />
+			<enumeration value="F" />
+		</restriction>
+	</simpleType>
+
+
+
+
+</schema>

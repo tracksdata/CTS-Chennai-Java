@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:patient xmlns:tns="http://www.praveen.com/patient"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.praveen.com/patient patientpayment.xsd "
+	patId="1024"
+	>
+	<tns:name>AAAA</tns:name>
+	<tns:age>1</tns:age>
+	<tns:gender>M</tns:gender>
+	<tns:dob>2001-01-01</tns:dob>
+	<tns:email>tns:email</tns:email>
+	<tns:phone>1111111111</tns:phone>
+	<tns:paymentType>
+		<tns:insurence>
+			<tns:limit>7645786</tns:limit>
+			<tns:provider>ICICI</tns:provider>
+		</tns:insurence>
+
+	</tns:paymentType>
+</tns:patient>
