@@ -33,23 +33,9 @@
 		<property name="hbm2ddl.auto">update</property>
 
 		<!-- Mapping Resources -->
-
-		<!-- <mapping class="com.Account" /> -->
-		<!-- <mapping class="com.onetoone.Employee" /> -->
-		<!-- <mapping class="com.onetoone.Department" /> -->
-
-
-		<!-- <mapping class="com.onetomany.Employee" /> <mapping class="com.onetomany.Department" 
-			/> -->
-
-
-		<!-- <mapping class="com.manytoone.Employee" /> -->
-		<!-- <mapping class="com.manytoone.Department" /> -->
-
-		<mapping class="com.manytomany.Course"/>
-		<mapping class="com.manytomany.Student"/>
 		
-		
+<!-- 		<mapping class="com.Account" /> -->
+		<mapping class="com.Employee" />
 
 	</session-factory>
 
