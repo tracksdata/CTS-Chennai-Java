@@ -1,10 +1,17 @@
-package com;
+package com.manytoone;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Department {
+
+	@Id
 	private int deptId;
 	private String deptName;
 	private String loc;
 
+	
 	public int getDeptId() {
 		return deptId;
 	}
