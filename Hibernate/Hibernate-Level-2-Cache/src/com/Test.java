@@ -1,7 +1,4 @@
 package com;
-
-import java.util.Date;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -31,8 +28,6 @@ public class Test {
 		Course c2 = (Course) ses.get(Course.class, 10);
 		System.out.println("Cours Name: " + c2.getCourseName());
 
-		
-		
 		
 		sf.close();
 
