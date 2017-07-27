@@ -1,0 +1,2 @@
+keytool -import -file d:\data\mavenrep.cer -keystore D:\data\mavenKeystore
+mvn clean install -Djavax.net.ssl.trustStore=d:\data\mavenKeystore
