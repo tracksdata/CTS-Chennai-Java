@@ -4,11 +4,11 @@ public class Employee {
 
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("--- GC got EMployee Object");
+		System.out.println("--- GC got EMployee Object ");
 	}
 	
 	public Employee() {
-		System.out.println("---- Employee Object Created");
+		System.out.println("---- Employee Object Created "+this.hashCode());
 	}
 
 	public void info() {

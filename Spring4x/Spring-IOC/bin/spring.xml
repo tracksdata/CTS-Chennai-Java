@@ -4,7 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="e1" class="com.Employee" scope="prototype"/>
+<bean id="e1" class="com.Employee" scope="singleton"/>
 <!-- <bean id="e2" class="com.Employee"/> -->
+
+
 
 </beans>

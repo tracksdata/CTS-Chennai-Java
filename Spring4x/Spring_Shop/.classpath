@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/aspectjrt-1.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/aspectjweaver-1.7.2.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/cglib-nodep-3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/spring-aop-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring AOP/spring-aspects-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/spring-beans-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/spring-context-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/spring-core-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Tranings/Java Jar Files/Spring 4x Jars/Spring Core/spring-expression-4.2.3.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
