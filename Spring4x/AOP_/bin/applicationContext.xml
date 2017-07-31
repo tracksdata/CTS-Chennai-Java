@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	
+	<!-- Enable annotation post processor -->
+	<context:annotation-config />
+
+	<!-- Enable Spring dynamic Proxy Generation for AOP -->
+	<aop:aspectj-autoproxy />
+
+	<!-- My Business Componenets -->
+	<bean id="bankDAO" class="com.bank.dao.BankDAO">
+	</bean>
+	<bean id="bankService" class="com.service.BankSerive">
+	</bean>
+	
+	<!-- My Aspect Components -->
+	<bean id="loggingAspect" class="com.bank.aspects.LoggingAspect">
+	</bean>
+	
+
+	<!-- AOP defn -->
+
+	<!-- <aop:config>
+
+		<aop:aspect ref="loggingAspect" order="0">
+			<aop:pointcut expression="execution(* *.*(..))"
+			 id="allMethods" />
+			<aop:before method="logBefore"
+			 pointcut-ref="allMethods" />
+		</aop:aspect>
+
+	</aop:config> -->
+
+
+
+
+</beans>
