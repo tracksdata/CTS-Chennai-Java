@@ -3,6 +3,7 @@ package com.bank.aspects;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
 
 /*
  *  AOP Terminology
@@ -42,6 +43,7 @@ import org.aspectj.lang.annotation.Aspect;
 
 // Aspect
 @Aspect
+@Component
 //@Order(0)
 public class LoggingAspect {
 	
