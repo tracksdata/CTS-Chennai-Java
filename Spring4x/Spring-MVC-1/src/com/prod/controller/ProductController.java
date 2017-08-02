@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class ProductController {
 
-	@RequestMapping(value = "one.htm")
+	@RequestMapping(value = "one")
 	public void method1() {
 		System.out.println("--- method1 of ProductController");
 	}
@@ -19,7 +19,7 @@ public class ProductController {
 		return "hello";
 	}
 	
-	@RequestMapping(value = "thr.htm")
+	@RequestMapping(value = "/thr")
 	public String method3(Model xyz) {
 		System.out.println("--- method3 of ProductController");
 		String cities[]= {"Chennai","HYD","Pune","Delhi"};
