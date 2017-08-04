@@ -55,11 +55,7 @@
                     $http({
                         method : 'DELETE',
                         url : 'http://localhost:1981/Spring-MVC-Rest/user/' + user.id,
-                         headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'DELETE',
-                'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With',
-                'X-Random-Shit':'123123123'}
+                        
                   }).then(_success, _error);
                 };
  
@@ -79,7 +75,7 @@
                         url : 'http://localhost:1981/Spring-MVC-Rest/user/'
                     }).then(function successCallback(response) {
                         $scope.users = response.data;
-                         console.log("Test: "+response.statusText);
+            
                     }, function errorCallback(response) {
                         console.log("Test: "+response.statusText);
                     });
