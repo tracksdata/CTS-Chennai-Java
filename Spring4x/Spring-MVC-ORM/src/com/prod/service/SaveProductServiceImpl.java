@@ -1,7 +1,9 @@
 package com.prod.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,6 +14,7 @@ import com.prod.model.Product;
 public class SaveProductServiceImpl implements SaveProductService {
 
 	@Autowired
+	//@Qualifier(value="c1")
 	private ProductDao prodDao;
 	
 	@Override
