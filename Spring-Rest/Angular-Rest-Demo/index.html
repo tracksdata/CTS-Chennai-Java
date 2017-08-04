@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            AngularJS - REST Demo using $http service
+        </title>
+        <!-- Load AngularJS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script type="text/javascript">
+            var app = angular.module("UserManagement", []);
+         
+            //Controller Part
+            app.controller("UserManagementController", function($scope, $http) {
+         
+                //Initialize page with default data which is blank in this example
+                $scope.users = [];
+                $scope.form = {
+                    id : -1,
+                    name : "",
+                    age : "",
+                    salary : ""
+                };
+         
+                //Now load the data from server
+                _refreshPageData();
+         
+                //HTTP POST/PUT methods for add/edit employee
+                $scope.submitEmployee = function() {
+         
+                    var method = "";
+                    var url = "";
+                    if ($scope.form.id == -1) {
+                        //Id is absent so add employee - POST operation
+                        method = "POST";
+                        url = 'http://localhost:1981/Spring-MVC-Rest/user/';
+                    } else {
+                        //If Id is present, it's edit operation - PUT operation
+                        method = "PUT";
+                        url = 'http://localhost:1981/Spring-MVC-Rest/user/' + $scope.form.id;
+                    }
+         
+                    $http({
+                        method : method,
+                        url : url,
+                        data : angular.toJson($scope.form),
+                        headers : {
+                            'Content-Type' : 'application/json'
+                        }
+                    }).then( _success, _error );
+                };
+         
+                //HTTP DELETE- delete employee by Id
+                $scope.removeEmployee = function(user) {
+                    $http({
+                        method : 'DELETE',
+                        url : 'http://localhost:1981/Spring-MVC-Rest/user/' + user.id,
+                         headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'DELETE',
+                'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With',
+                'X-Random-Shit':'123123123'}
+                  }).then(_success, _error);
+                };
+ 
+                //In case of edit employee, populate form with employee data
+                $scope.editEmployee = function(user) {
+                    $scope.form.name = user.name;
+                    $scope.form.age = user.age;
+                    $scope.form.salary = user.salary;
+                    $scope.form.id = user.id;
+                };
+         
+                /* Private Methods */
+                //HTTP GET- get all employees collection
+                function _refreshPageData() {
+                    $http({
+                        method : 'GET',
+                        url : 'http://localhost:1981/Spring-MVC-Rest/user/'
+                    }).then(function successCallback(response) {
+                        $scope.users = response.data;
+                         console.log("Test: "+response.statusText);
+                    }, function errorCallback(response) {
+                        console.log("Test: "+response.statusText);
+                    });
+                }
+         
+                function _success(response) {
+                    _refreshPageData();
+                    _clearForm()
+                }
+         
+                function _error(response) {
+                    console.log(response.statusText);
+                }
+         
+                //Clear the form
+                function _clearForm() {
+                    $scope.form.name = "";
+                    $scope.form.age = "";
+                    $scope.form.salary = "";
+                    $scope.form.id = -1;
+                };
+            });
+        </script>
+        <style>
+            .button {
+                cursor: pointer;
+                color: blue;
+            }
+            td,th{
+                border: 1px solid gray;
+                width: 25%;
+                text-align: left;
+            }
+            table {
+                width: 600px;
+            }
+        </style>
+    <head>
+    <body ng-app="UserManagement" ng-controller="UserManagementController">
+         <h1>
+            AngularJS - Use $http to invoke RESTful APIs
+        </h1>
+ 
+        <table>
+            <tr>
+                <th>User Id</th>
+                <th>User Name Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Operation</th>
+            </tr>
+ 
+            <tr ng-repeat="user in users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.salary }}</td>
+                <td><a ng-click="editEmployee( user )" class="button">Edit</a> | <a ng-click="removeEmployee( user )" class="button">Remove</a></td>
+            </tr>
+ 
+        </table>
+ 
+        <h2>Add/Edit Employee</h2>
+ 
+        <form ng-submit="submitEmployee()">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" ng-model="form.name" size="60" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" ng-model="form.age" size="60" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" ng-model="form.salary" size="60" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
